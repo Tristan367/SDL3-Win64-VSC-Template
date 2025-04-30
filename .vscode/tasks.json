@@ -1,0 +1,52 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Resources", // generates icon in case it was changed
+            "type": "shell",
+            "command": "windres",
+            "args": [
+                "${workspaceFolder}/resource.rc",
+                "-O",
+                "coff",
+                "-o",
+                "${workspaceFolder}/resource.res"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Compile",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${workspaceFolder}/src/main.cpp",
+                "-o",
+                "${workspaceFolder}/build/game.exe",
+                "-I",
+                "${workspaceFolder}/dependencies",
+                "-I",
+                "${workspaceFolder}/dependencies/SDL3/include",
+                "-L",
+                "${workspaceFolder}/dependencies/SDL3/lib",
+                "-lSDL3",
+                "-lSDL3_test",
+                "${workspaceFolder}/resource.res"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build",
+            "dependsOn": [
+                "Generate Resources",
+                "Compile"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
