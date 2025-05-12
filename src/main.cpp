@@ -90,6 +90,7 @@ int main(int argc, char **argv)
             break;
 
         default:
+            scene = EXIT;
             break;
         }
         if (scene == EXIT)
