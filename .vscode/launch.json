@@ -7,7 +7,7 @@
       "request": "launch",
       "program": "${workspaceFolder}/build/game.exe",
       "args": [],
-      "cwd": "${workspaceFolder}",
+      "cwd": "${workspaceFolder}/build",
       "environment": [],
       "preLaunchTask": "Build",
       "stopAtEntry": false,

@@ -30,7 +30,10 @@
                 "${workspaceFolder}/dependencies/SDL3/lib",
                 "-lSDL3",
                 "-lSDL3_test",
-                "${workspaceFolder}/resource.res"
+                "${workspaceFolder}/resource.res",
+                "-std=c++20",
+                //"-mwindows" // uncomment this if you don't want a console window for the production build
+
             ],
             "problemMatcher": [
                 "$gcc"

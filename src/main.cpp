@@ -22,12 +22,8 @@ inline void setPixel(int *buffer, int width, int x, int y, int r, int g, int b, 
 inline void renderTest()
 {
     for (int y = 0; y < WINDOW_HEIGHT; y++)
-    {
         for (int x = 0; x < WINDOW_WIDTH; x++)
-        {
             setPixel(pixelBuffer, WINDOW_WIDTH, x, y, rand() % 256, rand() % 256, rand() % 256);
-        }
-    }
 
     char *pix;
     int pitch;
@@ -44,10 +40,8 @@ inline void handleInput()
 {
     SDL_Event e;
     if (SDL_PollEvent(&e))
-    {
         if (e.type == SDL_EVENT_QUIT)
             scene = EXIT;
-    }
 }
 
 void scene0()
