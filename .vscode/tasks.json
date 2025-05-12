@@ -2,7 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Generate Resources", // generates icon in case it was changed
+            "label": "Generate Resources",
             "type": "shell",
             "command": "windres",
             "args": [
@@ -17,7 +17,7 @@
         {
             "label": "Compile",
             "type": "shell",
-            "command": "g++",
+            "command": "C:/mingw64/bin/g++.exe",
             "args": [
                 "${workspaceFolder}/src/main.cpp",
                 "-o",
