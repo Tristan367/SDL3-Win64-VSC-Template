@@ -2,7 +2,7 @@ As long as you are on Windows and have mingw64 installed in the root directory o
 
 Installing mingw64:
 
-1. Go to https://www.mingw-w64.org/downloads/#mingw-w64-builds
+1. Go to https://github.com/niXman/mingw-builds-binaries/releases
 
 2. Download the asset that best suits your needs. If you're unsure, just go with x86_64-15.1.0-release-posix-seh-ucrt-rt_v12-rev0.7z
 
